@@ -1,3 +1,5 @@
+<div align="center">
+
 # PUZZLE DE LAS 15 LOSETAS - RAMIFICACIÓN Y PODA
 
 ## INFORMACIÓN DEL PROYECTO
@@ -8,6 +10,10 @@
 **Estudiante:** Alejandro De Mendoza Tovar  
 **Profesor:** Ing. Rafael Ángel Montoya Gutiérrez  
 **Fecha:** Noviembre 3, 2025
+
+</div>
+
+---
 
 ---
 
@@ -404,3 +410,12 @@ El algoritmo demuestra su eficiencia mediante:
 **Para:** Ing. Rafael Ángel Montoya Gutiérrez  
 **Asignatura:** Diseño Avanzado de Algoritmos  
 **Fecha:** Noviembre 3, 2025
+
+---
+
+## Autor
+
+**Alejandro De Mendoza**  
+Ingeniero Informático · Especialista en IA · Especialista en Ingeniería de Software · Máster en Arquitectura de Software
+
+[![GitHub](https://img.shields.io/badge/GitHub-AlejoTechEngineer-181717?style=for-the-badge&logo=github)](https://github.com/AlejoTechEngineer)
