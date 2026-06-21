@@ -413,6 +413,23 @@ El algoritmo demuestra su eficiencia mediante:
 
 ---
 
+## Arquitectura
+
+```mermaid
+flowchart TD
+    A[puzzle_losetas.py - Entrada: configuracion 4x4] --> B[Validador de Solubilidad - Analisis de inversiones]
+    B -->|Imposible| C[Terminar: sin solucion]
+    B -->|Soluble| D[Algoritmo A* - Ramificacion y Poda]
+    D --> E[Cola de Prioridad - f-n = g-n + h-n]
+    E --> F[Heuristica - Distancia Manhattan]
+    E --> G[Generador de Sucesores - arriba/abajo/izquierda/derecha]
+    G --> H[Poda - Estados ya visitados]
+    H --> E
+    F --> E
+    E --> I[Estado Objetivo: 1 2 3 4 / 5 6 7 8 / 9 10 11 12 / 13 14 15 _]
+    I --> J[Secuencia optima de movimientos]
+```
+
 ## Autor
 
 **Alejandro De Mendoza**  
