@@ -31,6 +31,23 @@
 
 ---
 
+## Arquitectura
+
+```mermaid
+flowchart TD
+    A[puzzle_losetas.py - Entrada: configuracion 4x4] --> B[Validador de Solubilidad - Analisis de inversiones]
+    B -->|Imposible| C[Terminar: sin solucion]
+    B -->|Soluble| D[Algoritmo A* - Ramificacion y Poda]
+    D --> E[Cola de Prioridad - f-n = g-n + h-n]
+    E --> F[Heuristica - Distancia Manhattan]
+    E --> G[Generador de Sucesores - arriba/abajo/izquierda/derecha]
+    G --> H[Poda - Estados ya visitados]
+    H --> E
+    F --> E
+    E --> I[Estado Objetivo: 1 2 3 4 / 5 6 7 8 / 9 10 11 12 / 13 14 15 _]
+    I --> J[Secuencia optima de movimientos]
+```
+
 ## DESCRIPCIÓN DEL PROYECTO
 
 El presente trabajo implementa un algoritmo de búsqueda heurística basado en la técnica de Ramificación y Poda (Branch and Bound) para resolver el problema clásico del Puzzle de las 15 Losetas. La solución utiliza el algoritmo A* (A-estrella) con la heurística de Distancia Manhattan para garantizar la obtención de la solución óptima con el mínimo número de movimientos.
@@ -412,23 +429,6 @@ El algoritmo demuestra su eficiencia mediante:
 **Fecha:** Noviembre 3, 2025
 
 ---
-
-## Arquitectura
-
-```mermaid
-flowchart TD
-    A[puzzle_losetas.py - Entrada: configuracion 4x4] --> B[Validador de Solubilidad - Analisis de inversiones]
-    B -->|Imposible| C[Terminar: sin solucion]
-    B -->|Soluble| D[Algoritmo A* - Ramificacion y Poda]
-    D --> E[Cola de Prioridad - f-n = g-n + h-n]
-    E --> F[Heuristica - Distancia Manhattan]
-    E --> G[Generador de Sucesores - arriba/abajo/izquierda/derecha]
-    G --> H[Poda - Estados ya visitados]
-    H --> E
-    F --> E
-    E --> I[Estado Objetivo: 1 2 3 4 / 5 6 7 8 / 9 10 11 12 / 13 14 15 _]
-    I --> J[Secuencia optima de movimientos]
-```
 
 ## Autor
 
